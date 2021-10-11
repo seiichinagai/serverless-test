@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/serverless-test/static/css/main.96a7f1d5.chunk.css",
-    "main.js": "/serverless-test/static/js/main.af380edd.chunk.js",
-    "main.js.map": "/serverless-test/static/js/main.af380edd.chunk.js.map",
+    "main.js": "/serverless-test/static/js/main.758b4fb2.chunk.js",
+    "main.js.map": "/serverless-test/static/js/main.758b4fb2.chunk.js.map",
     "runtime-main.js": "/serverless-test/static/js/runtime-main.e34943f8.js",
     "runtime-main.js.map": "/serverless-test/static/js/runtime-main.e34943f8.js.map",
     "static/js/2.ab0878c8.chunk.js": "/serverless-test/static/js/2.ab0878c8.chunk.js",
     "static/js/2.ab0878c8.chunk.js.map": "/serverless-test/static/js/2.ab0878c8.chunk.js.map",
     "index.html": "/serverless-test/index.html",
-    "precache-manifest.61ca9038f96c3fc2fbc650c5f9533222.js": "/serverless-test/precache-manifest.61ca9038f96c3fc2fbc650c5f9533222.js",
+    "precache-manifest.40f129ae7043ff6d3ea758340388df6c.js": "/serverless-test/precache-manifest.40f129ae7043ff6d3ea758340388df6c.js",
     "service-worker.js": "/serverless-test/service-worker.js",
     "static/css/main.96a7f1d5.chunk.css.map": "/serverless-test/static/css/main.96a7f1d5.chunk.css.map",
     "static/js/2.ab0878c8.chunk.js.LICENSE.txt": "/serverless-test/static/js/2.ab0878c8.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e34943f8.js",
     "static/js/2.ab0878c8.chunk.js",
     "static/css/main.96a7f1d5.chunk.css",
-    "static/js/main.af380edd.chunk.js"
+    "static/js/main.758b4fb2.chunk.js"
   ]
 }
