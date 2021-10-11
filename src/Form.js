@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Form extends Component {
+class Form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            message: '',
+            url: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -22,36 +21,48 @@ export default class Form extends Component {
     }
     async handleSubmit(event) {
         event.preventDefault();
-        const { name, message } = this.state;
-        await axios.post(
-            'https://i1xsjzkri4.execute-api.us-east-1.amazonaws.com/default/serverlessAppFunction',
-            { key1: `${name}, ${message}` }
-        );
+        const { url } = this.state;
+        if (this.validateURL(url)){
+            let res = await axios.post(
+                'https://qeqj4zej8c.execute-api.us-west-2.amazonaws.com/dev/open-commits',
+                { url: `${url}` }
+            );
+            Response.setState({response: JSON.stringify(res.data,null,2)})
+            // this.setState({ response: res});
+            console.log(res)
+            // return await res.json();
+        } else {
+            Response.setState({response: 'Invalid URL'})
+        }
+
+    }
+    validateURL(url){
+        try{
+            new URL(url)
+            return true;
+        } catch(urlErr){
+            return false;
+        }
     }
 
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
+                    <label>URL:</label>
                     <input
                         type="text"
-                        name="name"
+                        name="url"
                         onChange={this.handleChange}
-                        value={this.state.name}
+                        value={this.state.url}
                     />
 
-                    <label>Message:</label>
-                    <input
-                        type="text"
-                        name="message"
-                        onChange={this.handleChange}
-                        value={this.state.message}
-                    />
-
-                    <button type="submit">Send</button>
+                    <button type="submit">Get Open PRs</button>
                 </form>
+                {/*{ this.state.response }*/}
             </div>
         );
     }
 }
+
+export default Form;
