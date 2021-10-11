@@ -57,7 +57,7 @@ class Form extends Component {
                         value={this.state.url}
                     />
 
-                    <button type="submit">Get Open PRs</button>
+                    <button type="submit">Get Commits</button>
                 </form>
                 {/*{ this.state.response }*/}
             </div>
